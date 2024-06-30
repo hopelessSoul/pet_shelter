@@ -1,0 +1,20 @@
+{% extends 'pets/base.html' %}
+
+{% block title %}
+<title>Питомцы</title>
+{% endblock %}
+
+{% block body %}
+<h2> Список питомцев</h2>
+  {% for pet in pets %}
+  <div>
+    <p>Кличка: {{ pet.nickname }} </p>
+    <p>Возраст: {{ pet.age }}</p>
+    <p>Прибытие в приют: {{ pet.arriving_date }}</p>
+    <p>Вес: {{ pet.weight }}</p>
+    <p>Рост: {{ pet.height }}</p>
+    <p>Особые приметы {{ pet.special_signs }} </p>
+    <br>
+  </div>
+  {% endfor %}
+{% endblock %}
